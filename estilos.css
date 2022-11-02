@@ -185,7 +185,7 @@ header a:hover{
     font-weight: bold;
 }
 
-/*  */
+/* "caracterticas caligrafia #final" */
 
 #final{
     display: flex;
@@ -196,6 +196,7 @@ header a:hover{
     background-color: rgb(30,30,30);
     color: rgb(230, 224, 224);
     height: 80vh;
+    text-decoration: none;
 }
 
 #final h2{
