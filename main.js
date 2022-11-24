@@ -10,6 +10,7 @@ let shopItemsData = [
         price: 100,
         desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         img:"images/colombia.jpeg"
+        addEventListener: 
     },
     {
         id:"segundo",
