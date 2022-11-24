@@ -4,63 +4,38 @@
 
 <!-- !Head --> 
 <head>
-	<title>Centro de Atención al Cliente</title>
-	<link rel="stylesheet" href="estilos.css">
+	<title>Carrito de compras</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 <!-- Meta Tags -->    
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Contacto, Camisetas, Mundial 2022, FIFA, Qatar 2022">
-    <meta name="author" content="Ramiro Fiol & Martina Degui">
-    <meta name="description" content="Medios de contacto">
+  <meta name="keywords" content="Contacto, Camisetas, Mundial 2022, FIFA, Qatar 2022">
+  <meta name="author" content="Ramiro Fiol & Martina Degui">
+  <meta name="description" content="Medios de contacto">
 </head>
 
 <!-- !Body -->
-<body>
-	<header>
-		<div class="container">
+<body style="background-color: rgb(30,30,30)">
+    <header class="headcart">
+        <div class="container">
             <p class="logo">MiCamiseta.com</p>
             <nav>
+                <a href="#somos">Quienes Somos</a>
+                <a href="detalle.html">Camisetas</a>
             	<a href="index.html">Volver a la pagina principal</a>
-                <a href="#somos">Quienes Somos</a> 
-                <a href="contacto.html">Contacto</a> 
-                <a href="cart.html">
-                    <div class="cart">
-                      <i class="bi bi-cart2"></i>
-                      <div id="cartAmount" class="cartAmount">0</div>
-                    </div>
-                  </a>
+                <a id="contacto info" href="contacto.html">Contacto</a>
+                <div class="cart">
+                    <i class="bi bi-cart3"></i>
+                    <div id="cartAmount" class="cartAmount">0</div>
+                </div>
             </nav>
         </div>
-	</header>
-    <div class="navbar">
-        <a href="index.html">
-          <h2>Clothing Store</h2>
-        </a>
-    
-        <a href="cart.html">
-          <div class="cart">
-            <i class="bi bi-cart2"></i>
-            <div id="cartAmount" class="cartAmount">0</div>
-          </div>
-        </a>
-    
-      </div>
-    
-      <div id="label" class="text-center"></div>
-    
-      <div class="shopping-cart" id="shopping-cart"></div>
-  
-<!-- Footer -->
-    <footer class="footer-distributed">
-        <div class="footer-left">
-            <p class="footer-links">
-                <a class="link-1" href="https://www.instagram.com/dexterarg/?hl=en">Instagram</a>
-                <a href="https://twitter.com/dexter_arg?lang=en">Twitter</a>
-                <a href="https://www.tiktok.com/discover/outlet-argentina-buenos-aires-dexter">Tik Tok</a>
-                <a href="terminos.html">Terminos y condiciones</a>
-            </p>
-            <p>&copy; MiCamiseta.com</p>
-        </div>
-    </footer>
+    </header>
+    <div id="label" class="text-center"></div>
+
+    <div class="shopping-cart" id="shopping-cart"></div>
 </body>
+<script src="Datos.js"></script>
+<script src="cart.js"></script>
 </html>

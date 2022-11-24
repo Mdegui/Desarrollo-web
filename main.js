@@ -1,55 +1,6 @@
 let shop = document.getElementById('shop')
 
-/**
- * DATOS DE ITEMS DE LA TIENDA
- */
-let shopItemsData = [
-    {
-        id:"primero",
-        name:"Colombia",
-        price: 100,
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        img:"images/colombia.jpeg"
-
-    },
-    {
-        id:"segundo",
-        name:"Mexico",
-        price: 100,
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        img:"images/mexico.jpg"
-    },
-    {
-        id:"tercero",
-        name:"Espana",
-        price: 100,
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        img:"images/espa.jpg"
-    },
-    { 
-        id:"cuarto",
-        name:"Croacia",
-        price: 100,
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        img:"images/croacia.jpg"
-    },
-    { 
-        id:"quinto",
-        name:"Argentina",
-        price: 100,
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        img:"images/arg.jpg"
-    },
-    { 
-        id:"sexto",
-        name:"Francia",
-        price: 100,
-        desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        img:"images/francia.jpg"
-    },
-];
-
-let basket = [];
+let basket = JSON.parse(localStorage.getItem("datos")) || []
 
 /**
  * FUNCION PARA GENERAR CARTAS INDIVIDUALES
@@ -58,6 +9,7 @@ let basket = [];
     return (shop.innerHTML = shopItemsData
         .map((x)=>{
             let {id,name,price,desc,img} =x;
+            let search = basket.find((x)=>x.id === id) || []
         return  `
         <div id=product-id-${id} class="item">
         <img id=imagen width="220" src=${img} alt="">
@@ -68,7 +20,9 @@ let basket = [];
                 <h2>$ ${price}</h2>
                 <div class="buttons">
                     <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
-                    <div id=${id} class="quantity">0</div>
+                    <div id=${id} class="quantity">
+                    ${search.item === undefined ? 0: search.item}
+                    </div>
                     <i onclick="increment(${id})" class="bi bi-plus-lg"></i> 
                 </div>
             </div>
@@ -81,7 +35,7 @@ let basket = [];
 generateShop()
 
 /**
- *FUNCION DE INCREMENTO Y DECREMENTO DE CANTIDADES DE PRODUCTO
+ *FUNCION DE INCREMENTO Y DECREMENTO DE CANTIDADES DE PRODUCTO JUNTO CON LOCAL STORAGE Y SOLUCION DE ERRORES DE CONSOLA
  */
  let increment = (id)=>{
     let selectedItem = id;
@@ -98,18 +52,23 @@ generateShop()
 
     //console.log(basket)
     update(selectedItem.id);
+    localStorage.setItem("datos", JSON.stringify(basket));
 };
 let decrement = (id)=>{
     let selectedItem = id;
     let search = basket.find((x)=> x.id === selectedItem.id);
 
-    if(search.item === 0) return
+if(search === undefined) return
+    else if(search.item === 0) return
     else {
     search.item -= 1;
 }
 
-    //console.log(basket);
-    update(selectedItem.id);
+/** USAMOS BAKET.FILTER PARA QUE LOCAL STORAGE NO GUARDE LOS ITEMS CON VALOR 0 YA QUE ES INNECESARIO */ 
+update(selectedItem.id);
+basket = basket.filter((x)=>x.item !== 0);
+//console.log(basket);
+localStorage.setItem("datos", JSON.stringify(basket));
 };
 let update = (id)=>{
     let search = basket.find((x)=>x.id === id)

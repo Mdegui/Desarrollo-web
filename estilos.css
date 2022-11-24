@@ -48,7 +48,8 @@ button:hover{
 
 header{
     background-color:#8a1538;
-    
+    position:fixed ;
+
 }
 
 header .logo{
@@ -519,9 +520,7 @@ h4{
     border-radius: 3px;  
 }
 
-/**
-* ! Shop Items styles
-**/
+/*Items de la tienda*/
 
 .shop{
     display: grid;
@@ -577,9 +576,97 @@ h4{
     }
     
     .bi-dash-lg{
-    color: white;
+    color: black;
     }
     
     .bi-plus-lg{
-    color: white;
+    color: black;
     }
+
+    i{
+        cursor: pointer;
+    }
+
+/*Footer del carrito*/
+    #CartFooter{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: 2.5rem;    
+}
+    
+/*Texto y boton del carrito vacio*/
+.text-center{
+text-align: center;
+margin-bottom: 20px;
+}
+
+.HomeBtn{
+    background-color: #8a1538;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 357px;
+    margin-bottom: 357px;
+}
+
+.bi-x-lg{
+    color: red;
+    font-weight: bold;
+}
+
+/*Reglas de estilo para Carrito*/
+
+.shopping-cart{
+    display: grid;
+    grid-template-columns: repeat(1,420px);
+    justify-content: center;
+    gap: 15px;
+
+}
+
+/*Reglas de estilo para item del Carrito*/
+
+.cart-item{
+    border: 2px solid #8a1538;
+    border-radius: 5px;
+    display: flex;
+    background-color: white;
+}
+
+.title-price-x{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.title-price{
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.cart-item-price{
+    color: white;
+    background-color: #212529;
+    border-radius: 4px;
+    padding: 3px 6px;
+}
+
+.checkout, .removeAll{
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.precio{
+    justify-content: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.headcart{
+    position: relative;
+}
