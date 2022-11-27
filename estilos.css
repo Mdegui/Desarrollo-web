@@ -492,8 +492,8 @@ footer .container{
     }
 
     header .container{
-        flex-direction:row
-        justify-content: space-between;
+        flex-direction:row;
+        justify-content:column space-between;
         text-align: center;
     }
 
