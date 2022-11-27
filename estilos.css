@@ -492,8 +492,9 @@ footer .container{
     }
 
     header .container{
-        flex-direction: row;
+        flex-direction:row
         justify-content: space-between;
+        text-align: center;
     }
 
     header nav{
@@ -520,8 +521,8 @@ h4{
     background-color: #fff;
     color: #212529;
     font-size: 20px;
-    padding: 5px;
-    border-radius: 4px;
+    padding: 8px;
+    border-radius: 10px;
 }
 
 .cartAmount{
