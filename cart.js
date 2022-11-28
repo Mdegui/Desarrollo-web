@@ -1,3 +1,4 @@
+/* Martina Degui y Ramiro Fiol */ 
 let label = document.getElementById('label');
 let ShoppingCart = document.getElementById('shopping-cart');
 

@@ -1,6 +1,5 @@
-/**
- * DATOS DE ITEMS DE LA TIENDA
- */
+/* Martina Degui y Ramiro Fiol */
+/* DATOS DE ITEMS DE LA TIENDA */
 
 let shopItemsData = [
     {
