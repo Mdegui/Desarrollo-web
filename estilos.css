@@ -323,7 +323,237 @@ footer .container{
 .footer-distributed p.footer-links a:hover{text-decoration:underline;}
 
 /* Media Queries */
-@media (min-width: 850px){
+@media (min-width: 1024px){
+   
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #principal h1{
+        font-size: 5em;
+    }
+
+    #somos .container{
+        background-color: #8a1538;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #somos .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #somos h2{
+        margin-top: 0px;
+    }
+
+    #somos .img-container{
+        background-image: url("./images/somos.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px; 
+    }
+
+    #camisetas .remeras1{
+        display: flex;
+        justify-content: center;
+    }
+
+    #remeras1 p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #remeras1 h2{
+        font-size: 4em;
+    }
+
+    #remeras1 h3{
+        margin-top: 0;
+    }
+
+    #remeras1.carta{
+        padding: 50px;
+        background-size: 100% 150px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: #690f2a
+    }
+    #camisetas .remeras2{
+        display: flex;
+        justify-content: center;
+    }
+
+    #remeras2 p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #remeras2 h2{
+        font-size: 4em;
+    }
+
+    #remeras2 h3{
+        margin-top: 0;
+    }
+
+    #remeras2.carta{
+        padding: 50px;
+        background-size: 100% 150px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: #690f2a
+    }
+    #camisetas .remeras3{
+        display: flex;
+        justify-content: center;
+    }
+
+    #remeras3 p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #remeras3 h2{
+        font-size: 4em;
+    }
+
+    #remeras3 h3{
+        margin-top: 0;
+    }
+
+    #remeras3.carta{
+        padding: 50px;
+        background-size: 100% 150px;
+        background-repeat: no-repeat;
+        background-position-y: 0;
+        background-color: #690f2a
+    }
+   
+    #donde{
+        background-repeat: no-repeat;
+        background-size: 500px 400px;
+        background-position: calc(100vw - 500px) 120px;
+    }
+
+
+    #donde .container{
+        text-align: center;
+    }
+
+    #donde ul{
+        margin-right: 100px;
+    }
+    #barrios{
+        float: right;
+        display: inline;
+    }
+    #final h2{
+        font-size: 5em;
+    }
+
+    #final button{
+        font-size: 2em;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+    
+  .footer-distributed .footer-left, .footer-distributed {
+    text-align: center;
+  }
+
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
+
+h4{
+    font-size:medium;
+    color: white;
+}
+
+.cart{
+    position: relative;
+    background-color: #fff;
+    color: #212529;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.cartAmount{
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    padding: 3px;
+    border-radius: 3px;  
+}
+
+/*Items de la tienda*/
+
+.shop{
+    display: grid;
+    grid-template-columns: repeat(3, 224px );
+    gap: 20px;
+    justify-content: center;
+    background-color: rgb(30,30,30);
+    }
+    
+    @media (max-width: 1000px){
+        header{
+            position: fixed;
+            width: 100%;
+        }
+    
+        header .container{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    
+        header nav{
+            flex-direction: row;
+            padding-bottom: 0;
+            padding-right: 20px;
+        }
+        .shop{
+            grid-template-columns: repeat(2, 223px );
+    }
+    }
+    
+    
+ @media (min-width: 850px){
    
     header{
         position: fixed;
@@ -486,9 +716,8 @@ footer .container{
 
 
 @media (max-width: 600px) {
-    header{
-        position: fixed;
-        width: 100%;
+    header .logo{
+        display: none;
     }
   .footer-distributed .footer-left, .footer-distributed {
     text-align: center;
@@ -535,13 +764,160 @@ h4{
     }
     
     @media (max-width: 1000px){
-        
+        header{
+            position: fixed;
+            width: 100%;
+        }
+    
+        header .container{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    
+        header nav{
+            flex-direction: row;
+            padding-bottom: 0;
+            padding-right: 20px;
+        }
         .shop{
             grid-template-columns: repeat(2, 223px );
     }
     }
     
     @media (max-width: 500px){
+        .shop{
+            grid-template-columns: repeat(1, 223px );
+    }
+    }
+    
+    
+    
+    .item{
+        border: 2px solid #212529;
+        border-radius: 10px;
+        margin-top: 90px;
+        background-color: #8a1538;
+        color: white;
+    }
+    
+    .details{
+        display: flex;
+        flex-direction: column;
+        padding: 10px; 
+        gap: 10px;
+        font-size: small;
+    }
+    
+    .price-quantity{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: xx-small;
+    }
+    
+    .buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 18px;
+    }
+    
+    .bi-dash-lg{
+    color: black;
+    }
+    
+    .bi-plus-lg{
+    color: black;
+    }
+
+    i{
+        cursor: pointer;
+    }
+
+/*Footer del carrito*/
+    #CartFooter{
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: 2.5rem;    
+}
+    
+/*Texto y boton del carrito vacio*/
+.text-center{
+text-align: center;
+margin-bottom: 20px;
+}
+
+.HomeBtn{
+    background-color: #8a1538;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 357px;
+    margin-bottom: 357px;
+}
+
+.bi-x-lg{
+    color: red;
+    font-weight: bold;
+}
+
+/*Reglas de estilo para Carrito*/
+
+.shopping-cart{
+    display: grid;
+    grid-template-columns: repeat(1,420px);
+    justify-content: center;
+    gap: 15px;
+
+}
+
+/*Reglas de estilo para item del Carrito*/
+
+.cart-item{
+    border: 2px solid #8a1538;
+    border-radius: 5px;
+    display: flex;
+    background-color: white;
+}
+
+.title-price-x{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.title-price{
+display: flex;
+align-items: center;
+gap: 20px;
+}
+
+.cart-item-price{
+    color: white;
+    background-color: #212529;
+    border-radius: 4px;
+    padding: 3px 6px;
+}
+
+.checkout, .removeAll{
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.precio{
+    justify-content: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.headcart{
+    position: relative;
+}
         .shop{
             grid-template-columns: repeat(1, 223px );
     }
