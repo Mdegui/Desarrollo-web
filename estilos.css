@@ -490,18 +490,6 @@ footer .container{
         position: fixed;
         width: 100%;
     }
-
-    header .container{
-        flex-direction:row;
-        justify-content:column space-between;
-        text-align: center;
-    }
-
-    header nav{
-        flex-direction: row;
-        padding-bottom: 0;
-        padding-right: 20px;
-    }
   .footer-distributed .footer-left, .footer-distributed {
     text-align: center;
   }
